@@ -29,12 +29,12 @@ func main() {
 	app := happy.NewAPI()
 	app.Error404Handler = func(context *happy.Context, err interface{}) {
 		context.Response.WriteHeader(404)
-		context.Response.Write([]byte(`{"error": "route not found"}`))
+		context.Response.Write([]byte(`{"error": ["route not found"]}`))
 	}
 
 	app.PanicHandler = func(context *happy.Context, err interface{}) {
 		context.Response.WriteHeader(500)
-		context.Response.Write([]byte(`{"error": "internal error"}`))
+		context.Response.Write([]byte(`{"error": ["internal error"]}`))
 	}
 
 	action.RegisterActions(app)
