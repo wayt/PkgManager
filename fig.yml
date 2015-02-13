@@ -1,0 +1,33 @@
+api:
+    build: .
+    command: go run app.go
+    volumes:
+        - $GOPATH/src:/gopath/src
+    working_dir: /gopath/src/github.com/maxwayt/pkgmanager
+    ports:
+        - "9000:9000"
+    links:
+        - mongodb:mongodb_1
+        - gosto:gosto_1
+
+mongodb:
+    ports:
+        - "28017:28017"
+        - "27017:27017"
+    image: dockerfile/mongodb
+
+webdav:
+    build: docker/webdav
+
+gosto:
+    ports:
+        - "1024:1024"
+    build: docker/gosto
+    links:
+        - redisgosto:redisgosto_1
+        - webdav:webdav_1
+
+redisgosto:
+    ports:
+        - "6379:6379"
+    image: dockerfile/redis

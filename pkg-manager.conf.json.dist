@@ -1,0 +1,16 @@
+{
+    "bind_ip": "0.0.0.0",
+    "bind_port": 9000,
+    "log_file": "",
+    "go_max_procs": 0,
+    "mongodb": {
+        "servers": "mongodb_1",
+        "db": "pkg_manager"
+    },
+    "temp_dir": "/tmp",
+    "storage": {
+        "host": "http://gosto_1:1024",
+        "user": "pkgmanager",
+        "public_host": "http://127.0.0.1:1024"
+    }
+}
