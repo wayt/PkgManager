@@ -2,7 +2,7 @@ package plugin
 
 import (
 	"encoding/json"
-	"github.com/maxwayt/pkgmanager/storage"
+	"github.com/wayt/pkgmanager/storage"
 	"log"
 	"os"
 	"runtime"

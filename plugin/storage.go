@@ -1,7 +1,7 @@
 package plugin
 
 import (
-	"github.com/maxwayt/pkgmanager/storage"
+	"github.com/wayt/pkgmanager/storage"
 )
 
 var Storage *storage.Storage

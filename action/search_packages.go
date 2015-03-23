@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"github.com/gohappy/happy"
 	"github.com/gohappy/happy/validator"
-	"github.com/maxwayt/pkgmanager/plugin"
+	"github.com/wayt/pkgmanager/plugin"
 	"gopkg.in/mgo.v2/bson"
 	"log"
 )

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"github.com/gohappy/happy"
 	"github.com/gohappy/happy/validator"
-	"github.com/maxwayt/pkgmanager/plugin"
-	"github.com/maxwayt/pkgmanager/storage"
-	"github.com/maxwayt/pkgmanager/utility"
+	"github.com/wayt/pkgmanager/plugin"
+	"github.com/wayt/pkgmanager/storage"
+	"github.com/wayt/pkgmanager/utility"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"log"
@@ -89,7 +89,7 @@ func (c *createPackageAction) Run() {
 		return
 	}
 
-	filename := fmt.Sprintf(`%s_%d.jar`, c.GetParam("name"), 1)
+	filename := fmt.Sprintf(`%s_%d.apk`, c.GetParam("name"), 1)
 
 	if err := plugin.Storage.UploadMime(storage.BUCKET_JAR, filename, file, mimeType); err != nil {
 

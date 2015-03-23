@@ -4,8 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"github.com/gohappy/happy"
-	"github.com/maxwayt/pkgmanager/action"
-	"github.com/maxwayt/pkgmanager/plugin"
+	"github.com/wayt/pkgmanager/action"
+	"github.com/wayt/pkgmanager/plugin"
 	"log"
 )
 

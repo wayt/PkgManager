@@ -3,7 +3,7 @@ api:
     command: go run app.go
     volumes:
         - $GOPATH/src:/gopath/src
-    working_dir: /gopath/src/github.com/maxwayt/pkgmanager
+    working_dir: /gopath/src/github.com/wayt/pkgmanager
     ports:
         - "9000:9000"
     links:
